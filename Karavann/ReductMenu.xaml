@@ -1,0 +1,105 @@
+﻿<Window x:Class="Karavann.ReductMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karavann"
+        mc:Ignorable="d"
+        Title="ReductMenu" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image Source="/KaravanApp;component/Image/logo.png"
+                   Width="240"
+                   />
+            <Image HorizontalAlignment="Right"
+                   Name="imgexit"
+                   Source="/KaravanApp;component/Image/cross-symbol_icon-icons.com_74149.png"
+                   Width="20"
+                   VerticalAlignment="Top"
+                   Margin="0,7,7,0"
+                   Height="20" MouseDown="imgexit_MouseDown"  ></Image>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel HorizontalAlignment="Left"
+                        Margin="40,7">
+                <TextBlock Text="Продукт"
+                           Margin="5"
+                           Width="110"
+                           FontSize="16"/>
+                <TextBlock Text="Артикул"
+                           Width="110"
+                           Margin="5"
+                           FontSize="16"/>
+                <TextBlock Text="Цена"
+                           Width="110"
+                           Margin="5"
+                           FontSize="16"/>
+                <TextBlock Text="Категория"
+                           Width="110"
+                           Margin="5"
+                           FontSize="16"/>
+                <TextBlock Text="Вес"
+                           Width="110"
+                           Margin="5"
+                           FontSize="16"/>
+                <TextBlock Text="Срок годности"
+                           Width="110"
+                           Margin="5"
+                           FontSize="16"/>
+            </StackPanel>
+            <StackPanel  HorizontalAlignment="Center"
+                         Margin="0,10,0,0">
+                <TextBox x:Name="TitleTB"
+                Text="{Binding Product.Title}"
+                     FontSize="16"
+                         Width="150"/>
+                <TextBox Text="{Binding Product.Article}"
+                     x:Name="ArticleTB"
+                     FontSize="16"
+                     Margin="0,5"
+                         Width="150"/>
+                <TextBox Text="{Binding Product.Price}"
+                     x:Name="PriceTB"
+                     FontSize="16"
+                     Margin="0,5"
+                         Width="150"/>
+                <TextBox Text="{Binding Product.Category}"
+                     x:Name="CategoryTB"
+                     FontSize="16"
+                     Margin="0,5"
+                         Width="150"/>
+                <TextBox Text="{Binding Product.Weight}"
+                     x:Name="WeightTB"
+                     FontSize="16"
+                     Margin="0,5"
+                         Width="150"/>
+                <TextBox Text="{Binding Product.Date}"
+                     x:Name="DateTB"
+                     FontSize="16"
+                     Margin="0,5"
+                         Width="150"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Button Content="Сохранить" 
+                    FontSize="16" 
+                    Width="120"
+                    Click="Button_Click" />
+                <Button Content="Назад" 
+                    FontSize="16" 
+                    Name="btn_back"    
+                    Margin="10,0,0,0"
+                    Width="120" Click="btn_back_Click"
+                     />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
