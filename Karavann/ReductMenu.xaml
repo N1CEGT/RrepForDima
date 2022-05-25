@@ -13,12 +13,12 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Image Source="/KaravanApp;component/Image/logo.png"
+            <Image 
                    Width="240"
                    />
             <Image HorizontalAlignment="Right"
                    Name="imgexit"
-                   Source="/KaravanApp;component/Image/cross-symbol_icon-icons.com_74149.png"
+                  
                    Width="20"
                    VerticalAlignment="Top"
                    Margin="0,7,7,0"
